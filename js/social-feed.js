@@ -13,7 +13,7 @@
   Обновление: правьте telegramPosts / instagramPosts в js/config.js.
 */
 window.SocialFeed = (function () {
-  const TILE_COUNT = 2;
+  const TILE_COUNT = 1;
 
   const PAW_SVG = '<svg class="paw" viewBox="0 0 64 64" fill="currentColor"><circle cx="20" cy="18" r="7"/><circle cx="38" cy="14" r="7"/><circle cx="50" cy="27" r="6.5"/><circle cx="10" cy="31" r="6.5"/><path d="M32 30c11 0 18 8 18 16 0 7-5 11-12 11-4 0-6-2-10-2s-6 2-10 2c-7 0-11-4-11-11 0-8 7-16 18-16z"/></svg>';
 

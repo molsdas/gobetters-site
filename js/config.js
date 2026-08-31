@@ -145,31 +145,21 @@ window.SITE_CONFIG = {
   ],
 
   // Telegram и Instagram — без автообновления, чтобы посетитель без VPN не ждал загрузку с заблокированных доменов.
-  // Показываются первые 2 карточки. photo — путь к файлу (например "assets/telegram/1.jpg"), пока пусто — плейсхолдер.
+  // Показывается первая карточка. photo — путь к файлу (например "assets/social/telegram-1.jpg").
   // url — ссылка на конкретный пост; клик по карточке уводит именно туда (и уже там при необходимости включат VPN).
   telegramPosts: [
     {
-      photo: "",
-      caption: "Новая коллекция осенних комбинезонов уже в канале — смотрите фото и видео.",
-      url: "",
-    },
-    {
-      photo: "",
-      caption: "Как выбрать размер одежды для собаки: подробная инструкция с таблицей.",
-      url: "",
+      photo: "assets/social/telegram-1.jpg",
+      caption: "Посмотрите, в каком идеальном состоянии комбинезон на этой милахе! 😍 Спойлер: это не магия, а немного дисциплины при стирке...",
+      url: "https://t.me/GobettersAnimals/21",
     },
   ],
 
   instagramPosts: [
     {
-      photo: "",
-      caption: "жесть собака черная",
-      url: "https://www.instagram.com/p/Dcqq0x3CuHa/",
-    },
-    {
-      photo: "",
-      caption: "не собака вообще зачем",
-      url: "https://www.instagram.com/p/DcqqvvmCgpx/",
+      photo: "assets/social/instagram-1.jpg",
+      caption: "Лучшие прогулки это те, где некуда бежать и незачем торопиться ❄️",
+      url: "https://www.instagram.com/p/DctORZyDQP3/?img_index=1",
     },
   ],
 
