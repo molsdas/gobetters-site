@@ -295,6 +295,7 @@ img { max-width: 100%; display: block; }
 /* ---------- Catalog ---------- */
 .catalog { padding: 90px 0; }
 
+.catalog .section-title { margin-bottom: 40px; }
 .catalog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -312,6 +313,29 @@ img { max-width: 100%; display: block; }
 .catalog-card:hover { transform: translateY(-6px); }
 
 .catalog-card .ph-image { border-radius: 0; aspect-ratio: 4/3; }
+.catalog-card-photo { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.catalog-card-media { position: relative; overflow: hidden; }
+.coming-soon-badge {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(44, 32, 21, 0.32);
+  pointer-events: none;
+}
+.coming-soon-badge span {
+  transform: rotate(-24deg);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  border-top: 2px solid rgba(255, 255, 255, 0.75);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+  padding: 6px 0;
+  white-space: nowrap;
+}
 
 .catalog-card-body { padding: 20px 22px 24px; }
 .catalog-card-body h3 { margin: 0 0 8px; font-size: 18px; font-weight: 700; }
@@ -458,12 +482,14 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow);
   overflow-x: auto;
 }
-.size-table { width: 100%; min-width: 420px; border-collapse: collapse; }
+.size-table { width: 100%; min-width: 420px; border-collapse: collapse; table-layout: fixed; }
 .size-table th, .size-table td {
   padding: 14px 18px;
-  text-align: left;
+  text-align: center;
   font-size: 14px;
 }
+.size-table th:first-child, .size-table td:first-child { width: 22%; }
+.size-table th:not(:first-child), .size-table td:not(:first-child) { width: 39%; }
 .size-table thead th {
   background: var(--brown-dark);
   color: var(--white);
@@ -632,4 +658,15 @@ img { max-width: 100%; display: block; }
   .hero-feed-head { font-size: 10px; margin-bottom: 10px; }
   .hero-feed-tiles { gap: 8px; margin-bottom: 10px; }
   .hero-feed-link { font-size: 11px; }
+
+  .size-table { min-width: 0; }
+  .size-table th, .size-table td {
+    padding: 8px 5px;
+    font-size: 11.5px;
+  }
+  .size-table thead th {
+    font-size: 9.5px;
+    letter-spacing: 0.01em;
+    padding: 10px 5px;
+  }
 }

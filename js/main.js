@@ -38,9 +38,11 @@
     const grid = document.getElementById('catalogGrid');
     grid.innerHTML = cfg.catalog.map((item, i) => `
       <article class="catalog-card" data-index="${i}">
-        <div class="ph-image" data-tone="${item.accent}">
-          ${PAW_SVG}
-          <span class="ph-caption">${item.title}</span>
+        <div class="catalog-card-media">
+          ${item.photo
+            ? `<img class="catalog-card-photo" src="${item.photo}" alt="${item.title}">`
+            : `<div class="ph-image" data-tone="${item.accent}">${PAW_SVG}<span class="ph-caption">${item.title}</span></div>`}
+          ${item.comingSoon ? `<div class="coming-soon-badge"><span>Скоро</span></div>` : ''}
         </div>
         <div class="catalog-card-body">
           <h3>${item.title}</h3>
@@ -52,7 +54,7 @@
     grid.querySelectorAll('.catalog-card').forEach(card => {
       card.addEventListener('click', () => {
         const item = cfg.catalog[card.dataset.index];
-        openLightbox(item.title, item.description, item.accent);
+        openLightbox(item.title, item.description, item.accent, item.photo);
       });
     });
   }
@@ -143,11 +145,20 @@
     wrap.innerHTML = html;
   }
 
-  function openLightbox(title, text, tone) {
+  function openLightbox(title, text, tone, photo) {
     document.getElementById('lightboxTitle').textContent = title;
     document.getElementById('lightboxText').textContent = text;
     const img = document.getElementById('lightboxImage');
     img.setAttribute('data-tone', tone);
+    if (photo) {
+      img.style.backgroundImage = `url('${photo}')`;
+      img.style.backgroundSize = 'cover';
+      img.style.backgroundPosition = 'center';
+      img.querySelector('.paw').style.display = 'none';
+    } else {
+      img.style.backgroundImage = '';
+      img.querySelector('.paw').style.display = '';
+    }
     document.getElementById('lightbox').classList.add('open');
   }
 
