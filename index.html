@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gobetters animals — витрина одежды и аксессуаров для собак</title>
+<meta name="description" content="Витринный сайт магазина одежды и аксессуаров для собак. Каталог, соцсети — без онлайн-продаж.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="logo" href="#top">
+      <img class="logo-img" src="assets/logo-header.png" alt="Gobetters">
+      <span class="logo-sub" id="logoSub">animals</span>
+    </a>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#brand">О бренде</a></li>
+        <li><a href="#catalog">Каталог</a></li>
+        <li><a href="#sizes">Размеры</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1 id="heroTitle"></h1>
+        <p id="heroLead"></p>
+        <a href="#catalog" class="btn btn-primary">Смотреть коллекцию</a>
+      </div>
+      <div class="hero-feeds" id="heroFeeds">
+        <div class="hero-feed-card">
+          <div class="hero-feed-head">Instagram</div>
+          <div class="hero-feed-tiles" id="heroInstagramTiles"></div>
+          <a href="#" id="heroInstagramAll" class="hero-feed-link" target="_blank" rel="noopener">Смотреть все →</a>
+        </div>
+        <div class="hero-feed-card">
+          <div class="hero-feed-head">Telegram</div>
+          <div class="hero-feed-tiles" id="heroTelegramTiles"></div>
+          <a href="#" id="heroTelegramAll" class="hero-feed-link" target="_blank" rel="noopener">Смотреть все →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <img class="band-image" src="assets/band-photo.jpg" alt="Питомцы в одежде Gobetters animals">
+  </section>
+
+  <section class="pain-section">
+    <div class="container">
+      <h2 class="section-title">Знакомая история?</h2>
+      <div class="pain-grid" id="painGrid"></div>
+    </div>
+  </section>
+
+  <section class="process" id="brand">
+    <div class="container">
+      <span class="section-label" id="processEyebrow"></span>
+      <h2 class="section-title" id="processTitle"></h2>
+      <p class="section-sub" id="processLead"></p>
+      <div class="steps-grid" id="stepsGrid"></div>
+      <p class="process-closing" id="processClosing"></p>
+    </div>
+  </section>
+
+  <section class="catalog" id="catalog">
+    <div class="container">
+      <span class="section-label">Каталог</span>
+      <h2 class="section-title">Что у нас есть</h2>
+      <p class="section-sub">Просто посмотреть и вдохновиться — карточки открывают короткое описание категории, без цен и покупки.</p>
+      <div class="catalog-grid" id="catalogGrid"></div>
+    </div>
+  </section>
+
+  <section class="sizes" id="sizes">
+    <div class="container">
+      <span class="section-label">Размеры</span>
+      <h2 class="section-title">Как подобрать размер</h2>
+      <p class="section-sub">Два замера сантиметром — и вы точно знаете, какой размер брать.</p>
+      <div class="size-guide">
+        <div class="size-info">
+          <div class="size-diagram">
+            <img src="assets/size-guide-dog.jpg" alt="Схема замеров собаки: длина спины и объём груди" width="1277" height="832">
+          </div>
+          <div class="size-measures" id="sizeMeasures"></div>
+        </div>
+        <div class="size-table-wrap">
+          <table class="size-table" id="sizeTable"></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <span class="section-label">Отзывы</span>
+      <h2 class="section-title">Как это выглядит на ваших собаках</h2>
+      <p class="section-sub">Фотографии из отзывов покупателей.</p>
+      <div class="reviews-grid" id="reviewsGrid"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="contacts">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img class="logo-img footer-logo-img" src="assets/logo-footer.png" alt="Gobetters">
+        <span class="logo-sub footer-logo-sub" id="footerLogoSub">animals</span>
+      </div>
+      <p class="footer-tagline" id="footerTagline">Маленькие детали — большая разница для вашей собаки</p>
+      <p class="footer-contact" id="footerContact"></p>
+    </div>
+
+    <div class="footer-social-row">
+      <div>
+        <h3 class="footer-social-title">Мы в соцсетях</h3>
+        <p class="footer-social-text" id="footerSocialText">Новинки, съёмки и много красивых собак. Заходите.</p>
+      </div>
+      <div class="social-icons" id="socialIcons"></div>
+    </div>
+
+    <div class="footer-legal">
+      <span id="legalEntity"></span><br>
+      ИНН <span id="legalInn"></span><br>
+      © <span id="year"></span> <span id="footerYearName"></span>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-box">
+    <div class="ph-image" id="lightboxImage" data-tone="0">
+      <svg class="paw" viewBox="0 0 64 64" fill="currentColor"><circle cx="20" cy="18" r="7"/><circle cx="38" cy="14" r="7"/><circle cx="50" cy="27" r="6.5"/><circle cx="10" cy="31" r="6.5"/><path d="M32 30c11 0 18 8 18 16 0 7-5 11-12 11-4 0-6-2-10-2s-6 2-10 2c-7 0-11-4-11-11 0-8 7-16 18-16z"/></svg>
+    </div>
+    <div class="lightbox-body">
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxText"></p>
+      <button class="lightbox-close" id="lightboxClose">Закрыть</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/social-feed.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
